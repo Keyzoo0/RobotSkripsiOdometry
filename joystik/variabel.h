@@ -13,11 +13,6 @@ const int gridSize = 5;
 const int cellSize = 12; // 12
 const int xOffset = 10; // Offset untuk menggeser grid ke kanan
 
-// Array untuk menyimpan jalur yang telah dilalui
-const int maxPathLength = 100;
-float pathX[maxPathLength];
-float pathY[maxPathLength];
-int pathLength = 0;
 
 
 //===============================
@@ -61,10 +56,11 @@ esp_now_peer_info_t peerInfo;
 const int button1Pin = 19;
 const int button2Pin = 26;
 const int button3Pin = 23;
+const int button4Pin = 25;
 const int buttonL3 = 13;
-const int buttonR3 = 33;
+const int buttonR3 = 14;
 
-const int lxPin = 39;
+const int lxPin = 33;
 const int lyPin = 34;
 const int rxPin = 35;
 const int ryPin = 32;

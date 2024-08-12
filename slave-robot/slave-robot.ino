@@ -10,8 +10,12 @@ void loop() {
   readIMU();
   computePosition();
   sendDataToMaster();
+  printSend();
 }
 
+void printSend(){
+  Serial.printf(" %4f | %4f | %2f \n" , xpos , ypos , thdot);
+}
 
 
 void computePosition(){ // forward kinematic
@@ -53,8 +57,8 @@ ydot = r_wheel * (
   ydot = ydot * scale[1];
   // thdot = thdot * scale[2];
   // update position
-  xpos = xpos + xdot*ts;
-  ypos = ypos + ydot*ts;
+  xpos = xdot;
+  ypos = ydot;
   // th = th + thdot*ts;
   // Serial.printf("%4f | %4f | %4f | %4f \n " , rpm1 , rpm2 , rpm3 , rpm4);
   // Serial.print(xpos);Serial.print("\t");Serial.print(ypos);Serial.print("\t");Serial.println(thdot);

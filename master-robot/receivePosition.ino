@@ -21,16 +21,19 @@ void receiveEvent(int bytes) {
     Wire.readBytes((char*)&xpos, sizeof(xpos));
     Wire.readBytes((char*)&ypos, sizeof(ypos));
     Wire.readBytes((char*)&th, sizeof(th));
-    
     }
 }
 
 void calImu(){
-  if(dataReceive.buttonR3State == 1){
+  if(dataReceive.button2State == 1){
     th_cal = th;
   }
-  if(dataReceive.buttonL3State == 1){
-    xpos_cal = xpos;
-    ypos_cal = ypos;
+  if(dataReceive.button1State == 1){
+    xpos_cal = xdot;
+    
+  }
+  if(dataReceive.button3State == 1){
+    ypos_cal = ydot;
+   
   }
 }

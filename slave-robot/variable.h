@@ -21,7 +21,7 @@ bool isOrientationYSet = false;
 
 float r_wheel = 0.03; // 3cm = 0.03 meter
 
-float scale[3] = {0.002620195 , 0.002498034}; // 0.254045307
+float scale[3] = {0.001353407 , 0.001378316}; // 0.254045307
 // float scale[3] = {1 , 1 , 1}; // 0.0123020145
 float ts = 0.1;
 float xpos = 0, ypos = 0, th = 0;

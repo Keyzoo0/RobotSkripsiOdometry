@@ -28,7 +28,7 @@ struct_message_send dataSend;
 esp_now_peer_info_t peerInfo;
 
 // Alamat MAC dari ESP32 Master
-uint8_t broadcastAddress[] = { 0xd8, 0xbc, 0x38, 0xfd, 0xdf, 0x08 };
+uint8_t broadcastAddress[] = { 0xA0, 0xDD, 0x6C, 0x0F, 0x2D, 0xE4 };
 
 #define res 10
 #define freq 15000
@@ -76,6 +76,9 @@ const int slaveAddress = 0;
 volatile float xpos = 0.0;
 volatile float ypos = 0.0;
 volatile float th = 0.0;
+
+float xdot = 0.0 ;
+float ydot = 0.0 ;
 
 volatile float xpos_cal = 0.0;
 volatile float ypos_cal = 0.0;

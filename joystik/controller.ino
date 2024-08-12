@@ -3,11 +3,13 @@ void setupController(){
   pinMode(button1Pin, INPUT);
   pinMode(button2Pin, INPUT);
   pinMode(button3Pin, INPUT);
-  pinMode(buttonL3, INPUT_PULLUP);
-  pinMode(buttonR3, INPUT_PULLUP);
+  pinMode(button4Pin, INPUT);
 
-  pinMode(lxPin, INPUT);
-  pinMode(lyPin, INPUT);
+  pinMode(buttonL3, INPUT);
+  pinMode(buttonR3, INPUT);
+
+  pinMode(lxPin, INPUT_PULLUP);
+  pinMode(lyPin, INPUT_PULLUP);
   pinMode(rxPin, INPUT);
   pinMode(ryPin, INPUT);
 

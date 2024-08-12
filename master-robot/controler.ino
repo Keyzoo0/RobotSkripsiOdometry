@@ -41,8 +41,10 @@ void printForward(){
 }
 
 void sendPosition(){
-  dataSend.xpos = xpos - xpos_cal;
-  dataSend.ypos = ypos - ypos_cal;
+  xdot = xdot + xpos*0.01;
+  ydot = ydot + ypos*0.01;
+  dataSend.xpos = xdot - xpos_cal;
+  dataSend.ypos = ydot - ypos_cal;
   dataSend.th = th - th_cal;
   // Serial.printf("x:%4f|y:%4f|z:%4f\n",dataSend.xpos,dataSend.ypos,dataSend.th);
   

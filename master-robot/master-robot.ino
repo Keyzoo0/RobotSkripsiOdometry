@@ -10,9 +10,6 @@ void setup() {
 // + x=maju; - x=mundur; + y=kanan; - y=kiri; + teta=; - teta= putar kiri
 
 void loop() {
-  if(dataReceive.button3State){
-  printForward();
-  }
 
   // print_pos();
   calImu();
